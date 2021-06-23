@@ -1,6 +1,7 @@
 package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 import java.sql.SQLException;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws SQLException {
 
-        UserServiceImpl userServiceObj = new UserServiceImpl();
+        UserService userServiceObj = new UserServiceImpl();
         userServiceObj.createUsersTable();
         userServiceObj.saveUser("Герман", "Севостьянов", (byte) 25);
         userServiceObj.saveUser("Иван", "Капустин", (byte) 29);

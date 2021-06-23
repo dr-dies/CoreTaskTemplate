@@ -31,8 +31,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void dropUsersTable() {
         Connection newCon = Util.connect();
         try {
-            String sqlCommandDropTable = "DROP TABLE user";
-            PreparedStatement statement = newCon.prepareStatement(sqlCommandDropTable);
+            PreparedStatement statement = newCon.prepareStatement("DROP TABLE user");
             statement.execute();
             newCon.commit();
         } catch (SQLException e) {
