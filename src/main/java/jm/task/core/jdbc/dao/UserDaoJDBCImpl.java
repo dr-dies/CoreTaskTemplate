@@ -101,6 +101,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void cleanUsersTable() {
         Connection newCon = Util.connect();
+
         try {
             String sqlCommandDropTable = "DELETE FROM user";
             PreparedStatement statement = newCon.prepareStatement(sqlCommandDropTable);
