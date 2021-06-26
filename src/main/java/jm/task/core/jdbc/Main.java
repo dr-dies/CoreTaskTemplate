@@ -10,6 +10,7 @@ public class Main {
 
         UserServiceImpl userServiceObj = new UserServiceImpl();
         userServiceObj.createUsersTable();
+        System.out.println("Table created");
         userServiceObj.saveUser("Герман", "Севостьянов", (byte) 25);
         userServiceObj.saveUser("Иван", "Капустин", (byte) 29);
         userServiceObj.saveUser("Ментор", "Менторов", (byte) 100);
@@ -18,5 +19,6 @@ public class Main {
         userList.forEach(System.out::println);
         userServiceObj.cleanUsersTable();
         userServiceObj.dropUsersTable();
+        System.exit(0);
     }
 }

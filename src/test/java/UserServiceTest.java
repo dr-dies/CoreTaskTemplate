@@ -76,6 +76,7 @@ public class UserServiceTest {
             List<User> userList = userService.getAllUsers();
 
             if (userList.size() != 1) {
+                System.out.println("длина листа " + userList.size());
                 Assert.fail("Проверьте корректность работы метода сохранения пользователя/удаления или создания таблицы");
             }
         } catch (Exception e) {
@@ -92,6 +93,7 @@ public class UserServiceTest {
             userService.cleanUsersTable();
 
             if (userService.getAllUsers().size() != 0) {
+                System.out.println("длина листа " + userService.getAllUsers().size());
                 Assert.fail("Метод очищения таблицы пользователей реализован не корректно");
             }
         } catch (Exception e) {

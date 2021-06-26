@@ -57,6 +57,11 @@ public class UserDaoJDBCImpl implements UserDao {
         Util.close();
     }
 
+    @Override
+    public void saveUser(User user) {
+
+    }
+
     public void removeUserById(long id) {
         Connection newCon = Util.connect();
         try {
